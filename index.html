@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【公式】買取専門店 〇〇 | ブランド・金・時計を高価買取</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 基本スタイル */
+        :root {
+            --primary-color: #002b5b; /* 信頼のネイビー */
+            --accent-color: #d4af37;  /* 高級感のゴールド */
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            margin: 0;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* ヘッダー */
+        header {
+            background: #fff;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--accent-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .contact-btn {
+            background: #25d366; /* LINEカラー */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* ヒーローセクション */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80'); /* サンプル画像 */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-main {
+            background: var(--accent-color);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-main:hover {
+            opacity: 0.8;
+        }
+
+        /* 特徴セクション */
+        .features {
+            padding: 60px 5%;
+            background: white;
+            text-align: center;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-item {
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .feature-item i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        /* 買取カテゴリー */
+        .categories {
+            padding: 60px 5%;
+            background: var(--bg-light);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .cat-card {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        /* フッター */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 40px 5%;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">買取専門店 〇〇</div>
+        <a href="#" class="contact-btn"><i class="fab fa-line"></i> 無料査定する</a>
+    </header>
+
+    <section class="hero">
+        <h1>他店より1円でも安ければ<br>ご相談ください！</h1>
+        <p>ブランド品・金・時計・宝石。プロの鑑定士が即日現金買取。</p>
+        <div class="cta-container">
+            <a href="tel:0120-000-000" class="btn-main" style="background:#e67e22;"><i class="fas fa-phone"></i> 0120-000-000</a>
+            <a href="#" class="btn-main"><i class="fas fa-search-dollar"></i> WEB査定はこちら</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2 class="section-title">〇〇が選ばれる理由</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h3>業界最高水準の買取価格</h3>
+                <p>独自の販売ルートと徹底的なコスト削減により、お客様への還元額を最大化しています。</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-user-check"></i>
+                <h3>スピード査定・即金</h3>
+                <p>最短5分で査定完了。その場で現金をお支払いいたします。お急ぎの方も安心です。</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-gem"></i>
+                <h3>どんな状態でも査定OK</h3>
+                <p>ボロボロのバッグ、切れたネックレス、動かない時計でも価値を見逃しません。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <h2 class="section-title" style="text-align:center;">買取対象品目</h2>
+        <div class="category-grid">
+            <div class="cat-card">貴金属・金</div>
+            <div class="cat-card">ブランドバッグ</div>
+            <div class="cat-card">高級腕時計</div>
+            <div class="cat-card">ダイヤモンド</div>
+            <div class="cat-card">お酒</div>
+            <div class="cat-card">切手・古銭</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 買取専門店 〇〇 All Rights Reserved.</p>
+        <p>古物商許可証：第00000000号</p>
+    </footer>
+
+</body>
+</html>
