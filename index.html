@@ -3,211 +3,349 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【公式】買取専門店 〇〇 | ブランド・金・時計を高価買取</title>
+    <title>【公式】買取専門店 まごころ | ご自宅に眠るお品、査定無料！</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* 基本スタイル */
+        /* 基本スタイル：シニア向けに特大化 */
         :root {
-            --primary-color: #002b5b; /* 信頼のネイビー */
-            --accent-color: #d4af37;  /* 高級感のゴールド */
-            --bg-light: #f8f9fa;
-            --text-dark: #333;
+            --primary-color: #f7931e; /* まごころカラー：オレンジ */
+            --dark-color: #333;
+            --light-bg: #fffbf5; /* 安心感のある薄いベージュ */
+            --text-dark: #222;
+            --accent-green: #25d366; /* LINE用 */
         }
 
         body {
-            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
             color: var(--text-dark);
-            line-height: 1.6;
+            background-color: var(--light-bg);
+            line-height: 1.5; /* 文字間を詰めて、パッと見で読みやすく */
+            font-size: 1.2rem; /* 全体的に文字を大きく */
         }
 
         /* ヘッダー */
         header {
             background: #fff;
-            padding: 15px 5%;
+            padding: 20px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 3px solid var(--accent-color);
+            border-bottom: 5px solid var(--primary-color);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 32px; /* ロゴも大きく */
             font-weight: bold;
+            color: var(--dark-color);
+            display: flex;
+            align-items: center;
+        }
+        .logo-mark {
+            border: 3px solid var(--primary-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 24px;
             color: var(--primary-color);
         }
 
-        .contact-btn {
-            background: #25d366; /* LINEカラー */
-            color: white;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        /* ヒーローセクション */
+        /* ヒーローセクション：パンフレットの雰囲気を再現 */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80'); /* サンプル画像 */
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 5%;
-            text-align: center;
+            background: white;
+            padding: 60px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
         }
 
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        .hero-text {
+            width: 55%;
         }
 
-        .hero p {
-            font-size: 1.2rem;
+        .hero-text h1 {
+            font-size: 3.5rem; /* 特大文字 */
+            margin: 0 0 10px;
+            color: var(--dark-color);
+            letter-spacing: -2px;
+        }
+
+        .hero-text p.sub {
+            font-size: 1.8rem;
+            color: #d32f2f; /* 赤色で強調 */
+            font-weight: bold;
+            margin: 0 0 20px;
+        }
+
+        .hero-text h2 {
+            font-size: 4rem; /* 買取文字を最大に */
+            color: var(--primary-color);
+            margin: 0 0 20px;
+            letter-spacing: -3px;
+        }
+
+        .hero-text p.lead {
+            font-size: 1.5rem;
             margin-bottom: 30px;
         }
 
-        .cta-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
+        .hero-img {
+            width: 40%;
+            text-align: right;
         }
 
-        .btn-main {
-            background: var(--accent-color);
+        .hero-img img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* 重要な3つのポイント */
+        .points {
+            background: #d32f2f; /* 赤色背景で注意を引く */
             color: white;
-            padding: 15px 40px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .btn-main:hover {
-            opacity: 0.8;
-        }
-
-        /* 特徴セクション */
-        .features {
-            padding: 60px 5%;
-            background: white;
+            padding: 40px 5%;
+            display: flex;
+            justify-content: space-around;
             text-align: center;
         }
 
-        .section-title {
-            color: var(--primary-color);
-            margin-bottom: 40px;
-            font-size: 2rem;
+        .point-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            font-weight: bold;
+            letter-spacing: -1px;
         }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .feature-item {
-            padding: 30px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-        }
-
-        .feature-item i {
+        
+        .point-item i {
             font-size: 3rem;
-            color: var(--accent-color);
-            margin-bottom: 20px;
+            margin-right: 15px;
         }
 
         /* 買取カテゴリー */
         .categories {
             padding: 60px 5%;
-            background: var(--bg-light);
+            background: var(--light-bg);
         }
 
         .category-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(2, 1fr); /* 2カラムで、文字を大きく */
+            gap: 20px;
         }
 
         .cat-card {
             background: white;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 4px solid var(--accent-color);
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            position: relative;
         }
 
+        .cat-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            margin-right: 30px;
+        }
+
+        .cat-info h3 {
+            font-size: 2rem;
+            color: var(--dark-color);
+            margin: 0 0 10px;
+        }
+
+        .cat-info p {
+            font-size: 1.2rem;
+            margin: 0;
+            color: #d32f2f;
+            font-weight: bold;
+        }
+
+        /* 安心のポイント（フッター上） */
+        .reassurance {
+            padding: 40px 5%;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #ddd;
+        }
+
+        .reassurance-item {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+
+        /* 電話とLINE：コンバージョン用 */
+        .cta-box {
+            background: #fff;
+            padding: 60px 5%;
+            text-align: center;
+            border-top: 5px solid var(--primary-color);
+            position: fixed;
+            bottom: 0;
+            width: 90%;
+            left: 5%;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+            z-index: 999;
+            border-radius: 15px 15px 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn-phone {
+            background: #e67e22; /* オレンジ */
+            color: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 2.2rem; /* 特大電話 */
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .btn-phone i {
+            margin-right: 15px;
+        }
+
+        .btn-line {
+            background: var(--accent-green);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .btn-line i {
+            margin-right: 15px;
+        }
+        
         /* フッター */
         footer {
-            background: var(--primary-color);
-            color: white;
-            padding: 40px 5%;
+            background: #f7f7f7;
+            color: #666;
+            padding: 40px 5% 180px; /* CTAボックス分のパディング */
             text-align: center;
+            font-size: 1rem;
         }
 
+        /* スマホ対応 */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 1.8rem; }
+            .hero { flex-direction: column-reverse; padding: 30px 5%; }
+            .hero-text { width: 100%; text-align: center; }
+            .hero-img { width: 100%; text-align: center; margin-bottom: 20px;}
+            .hero-text h1 { font-size: 2.2rem; }
+            .hero-text h2 { font-size: 2.8rem; }
+            .hero-text p.sub { font-size: 1.3rem; }
+            .points { flex-direction: column; gap: 10px; padding: 20px 5%;}
+            .point-item { font-size: 1.5rem; justify-content: flex-start; text-align: left; }
+            .category-grid { grid-template-columns: 1fr; }
+            .cat-card img { width: 100px; height: 100px; margin-right: 15px; }
+            .reassurance { flex-wrap: wrap; gap: 10px; text-align: left; }
+            .cta-box { flex-direction: column; padding: 20px 5%;}
+            .btn-phone { font-size: 1.6rem; padding: 15px;}
+            .btn-line { font-size: 1.4rem; padding: 15px;}
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">買取専門店 〇〇</div>
-        <a href="#" class="contact-btn"><i class="fab fa-line"></i> 無料査定する</a>
+        <div class="logo">
+            <div class="logo-mark">まご</div>
+            買取専門店 まごころ
+        </div>
     </header>
 
     <section class="hero">
-        <h1>他店より1円でも安ければ<br>ご相談ください！</h1>
-        <p>ブランド品・金・時計・宝石。プロの鑑定士が即日現金買取。</p>
-        <div class="cta-container">
-            <a href="tel:0120-000-000" class="btn-main" style="background:#e67e22;"><i class="fas fa-phone"></i> 0120-000-000</a>
-            <a href="#" class="btn-main"><i class="fas fa-search-dollar"></i> WEB査定はこちら</a>
+        <div class="hero-text">
+            <p class="sub">ご自宅に眠るお品、査定無料！</p>
+            <h1>他店より1円でも安ければ<br>ご相談ください！</h1>
+            <h2>高価買取・査定無料</h2>
+            <p class="lead">プロの鑑定士が即日現金買取。動かなくてもOK、古くてもOK。</p>
+        </div>
+        <div class="hero-img">
+            <img src="https://images.unsplash.com/photo-1577020852921-2f8830873a58?q=80&w=600&auto=format&fit=crop" alt="買取専門店まごころ スタッフ一同">
         </div>
     </section>
 
-    <section class="features">
-        <h2 class="section-title">〇〇が選ばれる理由</h2>
-        <div class="feature-grid">
-            <div class="feature-item">
-                <i class="fas fa-hand-holding-usd"></i>
-                <h3>業界最高水準の買取価格</h3>
-                <p>独自の販売ルートと徹底的なコスト削減により、お客様への還元額を最大化しています。</p>
-            </div>
-            <div class="feature-item">
-                <i class="fas fa-user-check"></i>
-                <h3>スピード査定・即金</h3>
-                <p>最短5分で査定完了。その場で現金をお支払いいたします。お急ぎの方も安心です。</p>
-            </div>
-            <div class="feature-item">
-                <i class="fas fa-gem"></i>
-                <h3>どんな状態でも査定OK</h3>
-                <p>ボロボロのバッグ、切れたネックレス、動かない時計でも価値を見逃しません。</p>
-            </div>
-        </div>
+    <section class="points">
+        <div class="point-item"><i class="fas fa-home"></i> 出張買取OK</div>
+        <div class="point-item"><i class="fas fa-money-bill-wave"></i> 即日現金化</div>
     </section>
 
     <section class="categories">
-        <h2 class="section-title" style="text-align:center;">買取対象品目</h2>
+        <h2 style="text-align:center; color: #d32f2f; font-size: 2.5rem; margin-bottom: 40px;">買取対象品目（一部）</h2>
         <div class="category-grid">
-            <div class="cat-card">貴金属・金</div>
-            <div class="cat-card">ブランドバッグ</div>
-            <div class="cat-card">高級腕時計</div>
-            <div class="cat-card">ダイヤモンド</div>
-            <div class="cat-card">お酒</div>
-            <div class="cat-card">切手・古銭</div>
+            <div class="cat-card">
+                <img src="https://images.unsplash.com/photo-1616421371589-d9d3004b77f8?q=80&w=300&auto=format&fit=crop" alt="金・貴金属">
+                <div class="cat-info">
+                    <h3>金・貴金属</h3>
+                    <p>古くてもOK</p>
+                </div>
+            </div>
+            <div class="cat-card">
+                <img src="https://images.unsplash.com/photo-1598282361661-00d9d3ac4628?q=80&w=300&auto=format&fit=crop" alt="時計">
+                <div class="cat-info">
+                    <h3>高級時計</h3>
+                    <p>動かなくてもOK</p>
+                </div>
+            </div>
+            <div class="cat-card">
+                <img src="https://images.unsplash.com/photo-1614031679232-04e463a56658?q=80&w=300&auto=format&fit=crop" alt="ブランドバッグ">
+                <div class="cat-info">
+                    <h3>ブランドバッグ</h3>
+                    <p>傷んでいてもOK</p>
+                </div>
+            </div>
+            <div class="cat-card">
+                <img src="https://images.unsplash.com/photo-1571550570172-2ff8c0a4d53a?q=80&w=300&auto=format&fit=crop" alt="骨董品・切手">
+                <div class="cat-info">
+                    <h3>骨董品・切手</h3>
+                    <p>査定だけでもOK</p>
+                </div>
+            </div>
         </div>
     </section>
 
+    <section class="reassurance">
+        <div class="reassurance-item"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> 査定無料</div>
+        <div class="reassurance-item"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> 出張無料</div>
+        <div class="reassurance-item"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> その場で現金化</div>
+        <div class="reassurance-item"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> 秘密厳守</div>
+    </section>
+
+    <div class="cta-box">
+        <a href="tel:0120-XXX-XXXX" class="btn-phone"><i class="fas fa-phone-alt"></i> 0120-XXX-XXXX<br><span style="font-size: 1rem; font-weight: normal;">9:00〜18:00 (年中無休)</span></a>
+        <a href="#" class="btn-line"><i class="fab fa-line"></i> LINE査定はこちら</a>
+    </div>
+
     <footer>
-        <p>&copy; 2026 買取専門店 〇〇 All Rights Reserved.</p>
-        <p>古物商許可証：第00000000号</p>
+        <p>買取専門店 まごころ</p>
+        <p>〒000-0000 ○○県○○市○○1-2-3</p>
+        <p>出張対応エリア：○○市・△△区 全域</p>
+        <p>&copy; 2026 買取専門店 まごころ All Rights Reserved.</p>
+        <p style="font-size: 0.8rem;">古物商許可証：第00000000号</p>
     </footer>
 
 </body>
